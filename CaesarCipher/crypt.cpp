@@ -16,10 +16,11 @@
  	 */
 
 	std::string coreEncrypt(std::string ins) {
-		std::string outs;
+		std::string outs = ins;
 		//loop
+
 		for (unsigned int i = 0; i < ins.length() ; i++){
-			outs[i] =  LETTERS[(int(ins[i]) + 13) % 26];
+			outs[i] =  LETTERS[(int(ins[i]) + int('A') + 13) % 26];
 		}
 
 		return outs;
