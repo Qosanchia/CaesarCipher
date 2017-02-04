@@ -47,3 +47,36 @@
 
 		return outs;
 	}
+
+	/*
+	 * string cleanInputs (string in)
+	 *
+	 * Modifies an input string so that it can be used in other functions
+	 * Default behavior is to
+	 */
+	std::string cleanInputs(std::string ins) {
+		std::string output;
+
+		return output;
+	}
+
+	/*
+	 * string enchancedEncrypt (String Ins, int rot)
+	 *
+	 * Encrypts a string using a Caesar Cipher, but based on the full span of
+	 * the ASCII table, from [Space] through ~
+	 *
+	 * ins - an input string of printable ASCII characters
+	 * rot  -a integer rotation value, to determine how far to turn the input
+	 *
+	 */
+	std::string enhancedEncrypt(std::string ins, int rot) {
+		std:: string out = ins;
+
+		for (int i = 0; i < out.length; i++) {
+			int val = int(ins[i]);
+			out[i] = (val - int(' ')) + (rot % (1));
+		}
+
+		return out;
+	}
